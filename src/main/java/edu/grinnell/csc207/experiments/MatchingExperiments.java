@@ -1,6 +1,7 @@
 package edu.grinnell.csc207.experiments;
 
 import java.io.PrintWriter;
+import edu.grinnell.csc207.util.StringUtils;
 
 /**
  * Experiments with matching parentheses and other such things.
@@ -20,7 +21,7 @@ public class MatchingExperiments {
     pen.print("checkMatching(\"" + str + "\") = ");
     pen.flush();
     try {
-      pen.println(checkMatching(str));
+      pen.println(StringUtils.checkMatching(str));
     } catch (Exception e) {
       pen.println("*** ERROR *** " + e.toString());
     } // try/catch
