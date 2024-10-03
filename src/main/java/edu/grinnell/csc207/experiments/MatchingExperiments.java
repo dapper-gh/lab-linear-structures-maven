@@ -21,7 +21,9 @@ public class MatchingExperiments {
     pen.print("checkMatching(\"" + str + "\") = ");
     pen.flush();
     try {
-      pen.println(StringUtils.checkMatching(str));
+      pen.print(str + ": ");
+      StringUtils.checkMatching(str);
+      pen.println("Good!");
     } catch (Exception e) {
       pen.println("*** ERROR *** " + e.toString());
     } // try/catch
