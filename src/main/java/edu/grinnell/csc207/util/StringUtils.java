@@ -21,7 +21,31 @@ public class StringUtils {
    */
   public static boolean checkMatching(String str) {
     Stack<Character> parens = new LinkedStack<Character>();
-    return false;       // STUB
+    for (int i = 0; i < str.length(); i++) {
+      char thisChar = str.charAt(i);
+      if (thisChar == '(' || thisChar == '[') {
+        try {
+          parens.push(thisChar);
+        } catch (Exception e) {
+          // Stack is full, unable to compute
+          return false;
+        } // try-catch
+      } else if (thisChar == ')' || thisChar == ']') {
+        try {
+          char popped = parens.pop();
+          if (thisChar == ')' && popped != '(') {
+            return false;
+          } else if (thisChar == ']' && popped != '[') {
+            return false;
+          } // if-else-if
+        } catch (Exception e) {
+          // Stack is empty, too many close characters
+          return false;
+        } // try-catch
+      } // if-else
+    } // for
+
+    return parens.isEmpty();
   } // checkMatching
 } // class StringUtils    
 
