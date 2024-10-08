@@ -36,7 +36,7 @@ public class ArrayBasedQueueExperiment {
     // should be empty
     expt.isEmpty();
 
-    /*
+    
     // It's always good to see what happens after you've cleared
     // out a structure. So add a few more elements.
     // We'll leave this test until we've worked out some kinks (Dave?)
@@ -50,7 +50,7 @@ public class ArrayBasedQueueExperiment {
     expt.get();
     // And we're back down to the empty queue
     expt.isEmpty();
-    */
+    
 
     /*
     // An iteration experiment, once we've workd out some kinks (Ray?)
